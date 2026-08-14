@@ -1,25 +1,20 @@
-const mineflayer = require('mineflayer')
+const mineflayer = require('mineflayer');
 
 const bot = mineflayer.createBot({
-  host: 'mythiclegacybd.falixsrv.me', 
+  host: '136.243.83.105',
   port: 56390,
-  username: 'AFK_Bot',
-  version: false 
-})
+  username: 'MyBot',
+  version: '1.20.1'
+});
 
 bot.on('spawn', () => {
-  console.log('বট সফলভাবে সার্ভারে ঢুকেছে!')
-  
-  // প্রতি ৫ সেকেন্ড পর পর বট ডানে বা বামે একটু ঘুরবে এবং লাফাবে
-  setInterval(() => {
-    bot.look(Math.random() * Math.PI * 2, 0)
-    bot.setControlState('jump', true)
-    setTimeout(() => {
-      bot.setControlState('jump', false)
-    }, 500)
-  }, 5000)
-})
+  console.log('Bot successfully joined the server!');
+});
 
-bot.on('end', () => {
-  console.log('ডিসকানেক্ট হয়ে গেছে...')
-})
+bot.on('error', (err) => {
+  console.log('Error occurred:', err);
+});
+
+bot.on('kicked', (reason) => {
+  console.log('Bot was kicked:', reason);
+});

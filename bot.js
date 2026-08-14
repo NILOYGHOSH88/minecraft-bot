@@ -1,10 +1,10 @@
-const mineflayer =ریquire('mineflayer'); // বানান ঠিক রাখা হলো
+const mineflayer = require('mineflayer');
 
 const bot = mineflayer.createBot({
   host: '136.243.83.105',
   port: 56390,
   username: 'MyBot',
-  version: '1.20.1', // এখানে সরাসরি 1.20.1 বসানো হলো যাতে প্রোটোকল কোনো ভুল ভার্সন না খোঁজে
+  version: '1.20.4', // ফ্যালিক্স সার্ভারের সাথে কানেক্ট করার জন্য সবচেয়ে স্থিতিশীল জাভা ভার্সন
   auth: 'offline'
 });
 

@@ -4,7 +4,7 @@ const bot = mineflayer.createBot({
   host: '136.243.83.105',
   port: 56390,
   username: 'MyBot',
-  version: '1.20.1'
+  version: '26.2' // এখানে সার্ভারের সঠিক ভার্সন 26.2 বসিয়ে দেওয়া হলো
 });
 
 bot.on('spawn', () => {
